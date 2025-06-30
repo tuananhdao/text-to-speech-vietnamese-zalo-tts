@@ -1,0 +1,228 @@
+{
+    "designSystem": {
+      "name": "WordCounter Style System",
+      "version": "1.0.0"
+    },
+    "colors": {
+      "primary": {
+        "blue": "#4A90E2",
+        "darkBlue": "#357ABD",
+        "lightBlue": "#E3F2FD"
+      },
+      "neutral": {
+        "white": "#FFFFFF",
+        "lightGray": "#F5F5F5",
+        "mediumGray": "#E0E0E0",
+        "darkGray": "#757575",
+        "charcoal": "#424242"
+      },
+      "semantic": {
+        "success": "#4CAF50",
+        "warning": "#FF9800",
+        "error": "#F44336",
+        "info": "#2196F3"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "primary": "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+        "fallback": "Arial, sans-serif"
+      },
+      "fontSizes": {
+        "xs": "12px",
+        "sm": "14px",
+        "base": "16px",
+        "lg": "18px",
+        "xl": "20px",
+        "2xl": "24px",
+        "3xl": "30px"
+      },
+      "fontWeights": {
+        "normal": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      },
+      "lineHeights": {
+        "tight": 1.2,
+        "normal": 1.5,
+        "relaxed": 1.75
+      }
+    },
+    "layout": {
+      "structure": "sidebar",
+      "breakpoints": {
+        "mobile": "768px",
+        "tablet": "1024px",
+        "desktop": "1200px"
+      },
+      "containers": {
+        "maxWidth": "1200px",
+        "padding": "20px"
+      },
+      "grid": {
+        "columns": 12,
+        "gap": "20px"
+      }
+    },
+    "components": {
+      "header": {
+        "backgroundColor": "#4A90E2",
+        "color": "#FFFFFF",
+        "height": "60px",
+        "padding": "0 20px",
+        "position": "fixed",
+        "zIndex": 1000,
+        "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
+      },
+      "sidebar": {
+        "backgroundColor": "#F5F5F5",
+        "width": "250px",
+        "padding": "20px",
+        "borderRight": "1px solid #E0E0E0",
+        "position": "fixed",
+        "height": "calc(100vh - 60px)",
+        "top": "60px",
+        "overflowY": "auto"
+      },
+      "mainContent": {
+        "backgroundColor": "#FFFFFF",
+        "marginLeft": "250px",
+        "marginTop": "60px",
+        "padding": "30px",
+        "minHeight": "calc(100vh - 60px)"
+      },
+      "statisticsCards": {
+        "backgroundColor": "#FFFFFF",
+        "border": "1px solid #E0E0E0",
+        "borderRadius": "8px",
+        "padding": "20px",
+        "margin": "10px 0",
+        "boxShadow": "0 2px 4px rgba(0,0,0,0.05)",
+        "display": "flex",
+        "flexDirection": "column",
+        "gap": "10px"
+      },
+      "toolbarButtons": {
+        "backgroundColor": "#4A90E2",
+        "color": "#FFFFFF",
+        "border": "none",
+        "borderRadius": "4px",
+        "padding": "8px 16px",
+        "fontSize": "14px",
+        "cursor": "pointer",
+        "transition": "background-color 0.2s ease",
+        "hover": {
+          "backgroundColor": "#357ABD"
+        }
+      },
+      "collapsibleSections": {
+        "border": "1px solid #E0E0E0",
+        "borderRadius": "4px",
+        "marginBottom": "10px",
+        "header": {
+          "backgroundColor": "#F5F5F5",
+          "padding": "12px 16px",
+          "borderBottom": "1px solid #E0E0E0",
+          "cursor": "pointer",
+          "fontWeight": 500
+        },
+        "content": {
+          "padding": "16px",
+          "backgroundColor": "#FFFFFF"
+        }
+      }
+    },
+    "spacing": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px",
+      "2xl": "48px"
+    },
+    "borderRadius": {
+      "none": "0",
+      "sm": "4px",
+      "md": "8px",
+      "lg": "12px",
+      "full": "9999px"
+    },
+    "shadows": {
+      "sm": "0 1px 2px rgba(0,0,0,0.05)",
+      "md": "0 2px 4px rgba(0,0,0,0.1)",
+      "lg": "0 4px 8px rgba(0,0,0,0.15)",
+      "xl": "0 8px 16px rgba(0,0,0,0.2)"
+    },
+    "interactions": {
+      "transitions": {
+        "fast": "0.1s ease",
+        "normal": "0.2s ease",
+        "slow": "0.3s ease"
+      },
+      "hover": {
+        "transform": "translateY(-2px)",
+        "boxShadow": "0 4px 8px rgba(0,0,0,0.15)"
+      },
+      "focus": {
+        "outline": "2px solid #4A90E2",
+        "outlineOffset": "2px"
+      }
+    },
+    "responsive": {
+      "mobile": {
+        "sidebar": {
+          "position": "absolute",
+          "transform": "translateX(-100%)",
+          "transition": "transform 0.3s ease"
+        },
+        "mainContent": {
+          "marginLeft": "0",
+          "padding": "20px"
+        },
+        "header": {
+          "padding": "0 15px"
+        }
+      },
+      "tablet": {
+        "sidebar": {
+          "width": "200px"
+        },
+        "mainContent": {
+          "marginLeft": "200px",
+          "padding": "25px"
+        }
+      }
+    },
+    "accessibility": {
+      "focusVisible": true,
+      "highContrast": {
+        "textColor": "#000000",
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#000000"
+      },
+      "reducedMotion": {
+        "transitions": "none",
+        "animations": "none"
+      }
+    },
+    "usageInstructions": {
+      "description": "Modern, clean design system with blue primary color scheme and sidebar layout",
+      "keyFeatures": [
+        "Fixed blue header with white text",
+        "Left sidebar with light gray background",
+        "White main content area with cards and components",
+        "Clean typography using system fonts",
+        "Responsive design with mobile considerations",
+        "Accessible color contrasts and focus states"
+      ],
+      "implementationNotes": [
+        "Use CSS Grid or Flexbox for layout structure",
+        "Implement fixed positioning for header and sidebar",
+        "Apply consistent spacing using the spacing scale",
+        "Use box-shadows for depth and visual hierarchy",
+        "Ensure proper contrast ratios for accessibility",
+        "Include hover and focus states for interactive elements"
+      ]
+    }
+  }

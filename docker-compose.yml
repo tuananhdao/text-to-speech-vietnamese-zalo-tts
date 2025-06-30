@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  vietnamese-tts:
+    build: .
+    ports:
+      - "3000:80"
+    container_name: vietnamese-tts-app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    # Optional: Add volumes for persistent data if needed
+    # volumes:
+    #   - ./data:/app/data 
