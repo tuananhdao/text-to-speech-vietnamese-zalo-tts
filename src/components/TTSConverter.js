@@ -6,14 +6,19 @@ const TTSConverter = () => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  // TTS API configuration from tts.sh
+  // TTS API configuration from environment variables
   const TTS_API_CONFIG = {
     url: 'https://api.zalo.ai/v1/tts/synthesize',
-    apiKey: 'BoTSB5VMX2zdfXWSmZLeEam6lpnG5ASD',
+    apiKey: process.env.REACT_APP_ZALO_API_KEY,
     speakerId: '6',
     speed: '1.2',
     encodeType: '0'
   };
+
+  // Check if API key is available
+  if (!TTS_API_CONFIG.apiKey) {
+    console.error('REACT_APP_ZALO_API_KEY environment variable is not set');
+  }
 
   // Split text into sentences
   const splitIntoSentences = (text) => {
@@ -70,6 +75,11 @@ const TTSConverter = () => {
   const handleGenerate = async () => {
     if (!inputText.trim()) {
       alert('Vui lòng nhập văn bản để chuyển đổi');
+      return;
+    }
+
+    if (!TTS_API_CONFIG.apiKey) {
+      alert('Lỗi: API key chưa được cấu hình. Vui lòng kiểm tra file .env');
       return;
     }
 

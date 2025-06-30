@@ -16,18 +16,8 @@ A modern React web application for converting Vietnamese text to speech using th
 ## Technology Stack
 
 - **Frontend**: React 18 with functional components and hooks
-- **Styling**: Custom CSS following the provided design system
 - **API**: Zalo TTS API for Vietnamese text-to-speech conversion
 - **Audio Format**: WAV files for high-quality audio output
-
-## Design System
-
-The application follows the WordCounter Style System with:
-- **Primary Color**: Blue (#4A90E2)
-- **Typography**: System fonts (system-ui, Segoe UI, Roboto)
-- **Layout**: Clean card-based layout with proper spacing
-- **Components**: Consistent button styles, form inputs, and status indicators
-- **Accessibility**: Focus states, high contrast support, and reduced motion options
 
 ## Getting Started
 
@@ -44,12 +34,21 @@ The application follows the WordCounter Style System with:
    npm install
    ```
 
-3. Start the development server:
+3. Set up environment variables:
+   ```bash
+   # Copy the example environment file
+   cp .env.example .env
+   
+   # Edit .env and add your Zalo API key
+   # REACT_APP_ZALO_API_KEY=your_actual_api_key_here
+   ```
+
+4. Start the development server:
    ```bash
    npm start
    ```
 
-4. Open your browser and navigate to `http://localhost:3000`
+5. Open your browser and navigate to `http://localhost:3000`
 
 ## Usage
 
@@ -62,9 +61,19 @@ The application follows the WordCounter Style System with:
 
 The application uses the Zalo TTS API with the following configuration:
 - **API Endpoint**: `https://api.zalo.ai/v1/tts/synthesize`
+- **API Key**: Configured via environment variable `REACT_APP_ZALO_API_KEY`
 - **Speaker ID**: 6 (Vietnamese voice)
 - **Speed**: 1.2x (slightly faster than normal)
 - **Output Format**: WAV audio files
+
+### Environment Variables
+
+Create a `.env` file in the project root with:
+```
+REACT_APP_ZALO_API_KEY=your_zalo_api_key_here
+```
+
+**Important**: Never commit your `.env` file to version control. The actual API key should be kept secure.
 
 ## Features in Detail
 
