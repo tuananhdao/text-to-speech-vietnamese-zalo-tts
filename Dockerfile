@@ -4,6 +4,10 @@ FROM node:18-alpine AS build
 # Set working directory
 WORKDIR /app
 
+# Accept build argument for API key
+ARG REACT_APP_ZALO_API_KEY
+ENV REACT_APP_ZALO_API_KEY=$REACT_APP_ZALO_API_KEY
+
 # Copy package files
 COPY package*.json ./
 
