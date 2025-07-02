@@ -5,13 +5,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* Header */}
-      <header className="header">
-        <h1>Vietnamese TTS Converter</h1>
-      </header>
-
       {/* Main Content */}
       <main className="main-content">
+        <h1 className="app-title">Tạo giọng nói theo từng câu</h1>
         <TTSConverter />
       </main>
     </div>
