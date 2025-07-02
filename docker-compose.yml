@@ -1,8 +1,9 @@
-version: '3.8'
-
 services:
   vietnamese-tts:
-    build: .
+    build:
+      context: .
+      args:
+        - REACT_APP_ZALO_API_KEY=${REACT_APP_ZALO_API_KEY}
     ports:
       - "3000:80"
     container_name: vietnamese-tts-app

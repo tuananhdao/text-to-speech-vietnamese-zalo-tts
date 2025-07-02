@@ -127,6 +127,14 @@ npm run build
 
 This creates a `build` folder with optimized production files.
 
+Build image
+
+```bash
+export REACT_APP_ZALO_API_KEY=your_zalo_api_key_here
+docker buildx create --name multiplatform --use
+docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/tuananhdao/tts:latest . --push
+```
+
 ## License
 
 This project is for educational and demonstration purposes. 
